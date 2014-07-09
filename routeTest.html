@@ -8,15 +8,18 @@
 <template name="hello">
   <h1>Hello World!</h1>
   {{greeting}}
+  <form>
   <a href="{{pathFor 'goodbye'}}">GOODBYE</a>
   <button id="hello">goodbye</button>
-
+  </form>
 </template>
 
 <template name="goodbye">
   <h1>Goodbye world</h1>
   {{greeting}}
+  <form>
   <a href="{{pathFor 'hello'}}">Hello</a>
   <button id="hello">Hello</button>
+  </form>
 
 </template>

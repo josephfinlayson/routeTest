@@ -12,15 +12,16 @@ if (Meteor.isClient) {
     };
     
     Template.goodbye.events({
-        'click button': function() {
-
+        'click button': function(e) {
+            e.preventDefault();
             Session.set('key', 'just came from goodbye');
             return Router.go('hello')
         }
     });
 
     Template.hello.events({
-        'click button': function() {
+        'click button': function(e) {
+            e.preventDefault();
             Session.set('key', 'just came from hello');
             return Router.go('goodbye')
         }
