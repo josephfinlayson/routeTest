@@ -1,0 +1,22 @@
+<head>
+  <title>routeTest</title>
+</head>
+
+<body>
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <a href="{{pathFor 'goodbye'}}">GOODBYE</a>
+  <button id="hello">goodbye</button>
+
+</template>
+
+<template name="goodbye">
+  <h1>Goodbye world</h1>
+  {{greeting}}
+  <a href="{{pathFor 'hello'}}">Hello</a>
+  <button id="hello">Hello</button>
+
+</template>
